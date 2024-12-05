@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 const Menupage = () => {
-    const [menus, setMenus] = useState({});
+    const [menus, setMenus] = useState([]);
 
     useEffect(()=>{
         fetch("https://www.beforeitcools.site:5555/menu/select")
@@ -17,13 +17,15 @@ const Menupage = () => {
             });
     },[])
 
+    // const menuList = menus.map
+
     return (
         <>
             <h1>우리가 메뉴를 불러와서 보여줄 페이지</h1>
-            {/* <ul>{menus.map(function(item, index){
+            <ul>{menus.map(function(item, index){
                 return <li>{item}</li>
             })}
-            </ul> */}
+            </ul>
         </>
     );
 };
