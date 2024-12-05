@@ -23,7 +23,7 @@ const Menupage = () => {
         <>
             <h1>우리가 메뉴를 불러와서 보여줄 페이지</h1>
             <ul>{menus.map(function(item, index){
-                return <li>{item}</li>
+                return <li>{item.menuName} {item.menuPrice}</li>
             })}
             </ul>
         </>
